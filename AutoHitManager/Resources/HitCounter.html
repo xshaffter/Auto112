@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hit manager design</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+    </style>
+</head>
+<body>
+    <iframe id="run_data_frame" style="display:none;" src="run_data.html"></iframe>
+    <div class="row valign-center">
+        <div class="col-8">
+            <span>Impactos: <span id="hits"></span></span>
+        </div>
+        <div class="col-2">
+            <img src="res/fotf.png" alt="Fury of The Fallen!!!" id="fotf"/>
+        </div>
+    </div>
+    <script>
+        let hits = document.getElementById("hits");
+        let foft = document.getElementById("fotf");
+        function doUpdateData(run_data) {
+            try {
+                if (run_data.fotf) {
+                    foft.classList = foft.classList.remove("hidden");
+                } else {
+                    foft.classList.add("hidden");
+                }
+                hits.innerHTML = run_data.hits;
+            } catch (ex) {
+            }
+        }
+    </script>
+    <script src="javascript.js"></script>
+</body>
+</html>

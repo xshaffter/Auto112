@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hit manager design</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <iframe id="run_data_frame" style="display:none;" src="run_data.html"></iframe>
+    <div class="row valgin-center">
+        <img src="res/charms.png" alt="grubs:" />
+        <span class="charms"><span id="charm_count"></span>/<span id="total_charms"></span></span>
+    </div>
+    <script>
+        let charm_count = document.getElementById("charm_count");
+        let total_charms = document.getElementById("total_charms");
+
+        function doUpdateData(run_data) {
+            charm_count.innerHTML = run_data.charm_count;
+            total_charms.innerHTML = run_data.total_charms;
+        }
+    </script>
+    <script src="javascript.js"></script>
+</body>
+</html>

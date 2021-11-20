@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hit manager design</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="javascript.js"></script>
+        <style>
+        </style>
+    </head>
+    <body>
+        <iframe id="run_data_frame" style="display:none;" src="run_data.html"></iframe>
+        <div class="row">
+            <div class="col-4">
+                <img class="img" src="res/colosseum1.png" alt="colosseum1" id="colosseum1" />
+            </div>
+            <div class="col-4">
+                <img class="img" src="res/colosseum2.png" alt="colosseum2" id="colosseum2" />
+            </div>
+            <div class="col-4">
+                <img class="img" src="res/colosseum3.png" alt="colosseum3" id="colosseum3" />
+            </div>
+        </div>
+		<script>
+			let colosseum1 = document.getElementById("colosseum1");
+			let colosseum2 = document.getElementById("colosseum2");
+			let colosseum3 = document.getElementById("colosseum3");
+
+			function doUpdateData(run_data) {
+                if (run_data.colosseum1) {
+                    colosseum1.classList = colosseum1.classList.add("active");
+                } else {
+                    colosseum1.classList.remove("active");
+                }
+                if (run_data.colosseum2) {
+                    colosseum2.classList = colosseum2.classList.add("active");
+                } else {
+                    colosseum2.classList.remove("active");
+                }
+                if (run_data.colosseum3) {
+                    colosseum3.classList = colosseum3.classList.add("active");
+                } else {
+                    colosseum3.classList.remove("active");
+                }
+			}
+		</script>
+		<script src="javascript.js"></script>
+    </body>
+</html>

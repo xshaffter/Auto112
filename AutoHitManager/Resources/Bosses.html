@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hit manager design</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="javascript.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <iframe id="run_data_frame" style="display:none;" src="run_data.html"></iframe>
+    <div class="grid-2-6">
+        <div class="box"><img id="img-1"/></div>
+        <div class="box"><img id="img-2"/></div>
+        <div class="box"><img id="img-3"/></div>
+        <div class="box"><img id="img-4"/></div>
+        <div class="box"><img id="img-5"/></div>
+        <div class="box"><img id="img-6"/></div>
+    </div>
+    <script>
+        let imgs = [
+            document.getElementById("img-1"),
+            document.getElementById("img-2"),
+            document.getElementById("img-3"),
+            document.getElementById("img-4"),
+            document.getElementById("img-5"),
+            document.getElementById("img-6")
+        ]
+
+        function doUpdateData(run_data) {
+            let index = 0;
+            Object.entries(run_data.bosses).forEach(([key, value]) => {
+                imgs[index].setAttribute("src", "res/bosses/" + key + ".png");
+                imgs[index].setAttribute("alt", key);
+                if (value.defeated) {
+                    imgs[index].parentElement.classList.add("active");
+                } else {
+                    imgs[index].parentElement.classList.remove("active");
+                }
+                index++;
+            });
+            for (let i = index; index < 6; i++) {
+                imgs[i].setAttribute("src", "");
+                imgs[i].setAttribute("alt", "");
+            }
+        }
+    </script>
+    <script src="javascript.js"></script>
+</body>
+</html>

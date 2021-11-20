@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hit manager design</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="javascript.js"></script>
+        <style>
+        </style>
+    </head>
+    <body>
+        <iframe id="run_data_frame" style="display:none;" src="run_data.html"></iframe>
+        <div class="row">
+            <div class="col-2">
+				<img class="img" src="res/dreamers/monomon.png" id="monomon" alt="monomon"/>
+            </div>
+            <div class="col-2">
+				<img class="img" src="res/dreamers/lurien.png" id="lurien" alt="lurien"/>
+            </div>
+            <div class="col-2">
+				<img class="img" src="res/dreamers/herrah.png" id="herrah" alt="herrah"/>
+            </div>
+        </div>
+		<script>
+			let monomon = document.getElementById("monomon");
+			let lurien = document.getElementById("lurien");
+			let herrah = document.getElementById("herrah");
+
+			function doUpdateData(run_data) {
+                if (run_data.dreamers[0]) {
+                    monomon.classList = monomon.classList.add("active");
+                } else {
+                    monomon.classList.remove("active");
+                }
+                if (run_data.dreamers[2]) {
+                    lurien.classList = lurien.classList.add("active");
+                } else {
+                    lurien.classList.remove("active");
+                }
+                if (run_data.dreamers[1]) {
+                    herrah.classList = herrah.classList.add("active");
+                } else {
+                    herrah.classList.remove("active");
+                }
+			}
+		</script>
+		<script src="javascript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hit manager design</title>
+        <link href="styles.css" rel="stylesheet" />
+        <style>
+        </style>
+    </head>
+    <body>
+        <iframe id="run_data_frame" style="display:none;" src="run_data.html"></iframe>
+        <img src="res/nail/0.png" alt="" id="nail" />
+        <script>
+            let nail = document.getElementById("nail");
+            function doUpdateData(run_data) {
+                nail.setAttribute("src", "res/nail/" + run_data.nail + ".png")
+            }
+        </script>
+        <script src="javascript.js"></script>
+    </body>
+</html>
