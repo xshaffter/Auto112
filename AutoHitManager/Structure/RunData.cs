@@ -15,7 +15,7 @@ namespace AutoHitManager.Structure
 
         private string fullMasks => PlayerData.instance.heartPieceMax.ToString().ToLower();
 
-        private int Grubs => PlayerData.instance.grubsCollected;
+        private int Grubs => PlayerData.instance.scenesGrubRescued.Count;
         private const int TotalGrubs = 46;
 
         private int Charms 
@@ -103,14 +103,14 @@ namespace AutoHitManager.Structure
                     },
                     new()
                     {
-                        Name = "Soul Warrior",
-                        Defeated = PlayerData.instance.killedMageKnight,
+                        Name = "Gruz Mother",
+                        Defeated = PlayerData.instance.killedBigFly,
                     },
 
                     new()
                     {
-                        Name = "Gruz Mother",
-                        Defeated = PlayerData.instance.killedBigFly,
+                        Name = "Soul Warrior",
+                        Defeated = PlayerData.instance.killedMageKnight,
                     },
                     new()
                     {
@@ -146,7 +146,7 @@ namespace AutoHitManager.Structure
                     new()
                     {
                         Name = "Crystal Guardian",
-                        Defeated = PlayerData.instance.defeatedMegaBeamMiner,
+                        Defeated = PlayerData.instance.killedMegaBeamMiner
                     },
                     new()
                     {
@@ -222,19 +222,19 @@ namespace AutoHitManager.Structure
                     },
                     new()
                     {
-                        Name = "Collector",
-                        Defeated = PlayerData.instance.collectorDefeated,
-                    },
-                    new()
-                    {
                         Name = "Watcher Knights",
                         Defeated = PlayerData.instance.lurienDefeated,
                     },
-
                     new()
                     {
                         Name = "White Defender",
                         Defeated = PlayerData.instance.whiteDefenderDefeated,
+                    },
+
+                    new()
+                    {
+                        Name = "Collector",
+                        Defeated = PlayerData.instance.collectorDefeated,
                     },
                     new()
                     {
@@ -306,17 +306,13 @@ namespace AutoHitManager.Structure
                 return $"{{{result}}}";
             }
         }
-
         private string EquippedCharms => $"[{string.Join(",", PlayerData.instance.equippedCharms.Select(i=> i.ToString()).ToArray())}]";
         private int CharmSlots => PlayerData.instance.charmSlots;
         private int TotalCharmSlots = 11;
         private int NailStatus => (PlayerData.instance.nailDamage - 5) / 4 <= 4 ? (PlayerData.instance.nailDamage - 5) / 4 : 4;
         private string Dreamers => $"[{PlayerData.instance.maskBrokenMonomon.ToString().ToLower()}, {PlayerData.instance.maskBrokenHegemol.ToString().ToLower()}, {PlayerData.instance.maskBrokenLurien.ToString().ToLower()}]";
-
         private int Hits => Global.LocalSaveData.Hits;
-
         private string Fury => Global.IntentionalHit.ToString().ToLower();
-
         public override string ToString()
         {
             string run_info = $"{{hits: {Hits}, fotf: {Fury}, dreamers: {Dreamers}, bosses: {Bosses}, charm_count: {Charms}, total_charms: {TotalCharms}, grubs: {Grubs}, total_grubs: {TotalGrubs}, masks: {fullMasks}, colosseum1: {Colloseum1}, colosseum2: {Colloseum2}, colosseum3: {Colloseum3}, nail: {NailStatus}, slots: {CharmSlots}, max_slots:{TotalCharmSlots}, charms:{EquippedCharms}, last_update: '{DateTime.Now.ToString("hh:mm:ss")}'}}";

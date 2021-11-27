@@ -29,7 +29,7 @@ namespace AutoHitManager
             "killedGhostAladar",
             "killedGhostXero",
             "defeatedMegaBeamMiner",
-            "defeatedMegaBeamMiner2",
+            "killedMegaBeamMiner",
             "killedMegaMossCharger",
             "killedGhostNoEyes",
             "hornetOutskirtsDefeated",
@@ -109,8 +109,8 @@ namespace AutoHitManager
             "gotCharm_37",
             "gotCharm_38",
             "gotCharm_39",
-            "gotCharm_40"
-
+            "gotCharm_40",
+            "atBench"
         };
         public static List<string> intFields = new()
         {
