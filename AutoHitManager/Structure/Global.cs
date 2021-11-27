@@ -103,33 +103,6 @@ namespace AutoHitManager.Cat
             }
         }
 
-        public static List<T> PaginateList<T>(List<T> list, int actualIndex, int pageSize)
-        {
-            if (pageSize >= list.Count)
-            {
-                return list;
-            }
-            int otherSplits = pageSize - 1;
-            int countSideDown = (int)(otherSplits / 2);
-            int countSideUp = (int)(otherSplits - countSideDown);
-            int first = actualIndex - countSideUp;
-
-            if (actualIndex <= countSideUp)
-            {
-                first = 0;
-            }
-            else if (first >= list.Count - pageSize)
-            {
-                first = list.Count - pageSize;
-            }
-            if (first + pageSize >= list.Count)
-            {
-                pageSize = list.Count - first;
-            }
-            list = list.GetRange(first, pageSize);
-            return list;
-        }
-
         public static void UpdateRunDataFile()
         {
             File.WriteAllText(Path.Combine(Constants.DirFolder, "run_data.html"), new RunData().ToString());
