@@ -303,3 +303,19 @@ th {
     .img.active {
         opacity: 1;
     }
+
+
+.w-100 {
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-4, .text-4 * {
+    font-size: 64px;
+}

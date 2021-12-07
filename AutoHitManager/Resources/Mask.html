@@ -11,15 +11,15 @@
     </head>
     <body>
         <iframe id="run_data_frame" style="display:none;" src="run_data.html"></iframe>
-        <img src="res/mask.png" alt="" id="mask" />
+        <img class="img" src="res/mask.png" alt="" id="mask" />
         <script>
             let mask = document.getElementById("mask");
 
             function doUpdateData(run_data) {
                 if (run_data.masks) {
-                    mask.classList = mask.classList.remove("hidden");
+                    mask.classList = mask.classList.add("active");
                 } else {
-                    mask.classList.add("hidden");
+                    mask.classList.remove("active");
                 }
             }
         </script>

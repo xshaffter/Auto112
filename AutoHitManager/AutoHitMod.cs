@@ -18,11 +18,13 @@ using static AutoHitManager.Managers.BindableFunctions;
 
 namespace AutoHitManager
 {
-    public class AutoHitMod : Mod<HitManagerSaveData, HitManagerSaveData>
+    public class AutoHitMod : Mod
     {
         internal static AutoHitMod LoadedInstance { get; set; }
 
         internal GameObject Game { get; private set; }
+        internal HitManagerSaveData saveData = new();
+        public override ModSettings SaveSettings { get => saveData; set => saveData = value as HitManagerSaveData; }
 
         public bool ToggleButtonInsideMenu => true;
 

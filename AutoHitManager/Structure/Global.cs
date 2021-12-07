@@ -19,7 +19,7 @@ namespace AutoHitManager.Cat
         internal static double FuryTime { get; set; }
         private static bool fury = false;
         internal static bool IsFuryEquipped;
-        internal static HitManagerSaveData LocalSaveData => AutoHitMod.LoadedInstance.Settings;
+        internal static HitManagerSaveData LocalSaveData => AutoHitMod.LoadedInstance.saveData;
         internal static Timer FuryTimer;
         internal static Timer FuryGestureTimer;
         internal static bool IsProhibitedZone = false;

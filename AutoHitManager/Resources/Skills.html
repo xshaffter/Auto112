@@ -105,13 +105,6 @@
         let lastUpdateTime;
 
         function doUpdateData(data) {
-
-            if (lastUpdateTime === data.lastUpdateTime) {
-                return;
-            }
-
-            lastUpdateTime = data.lastUpdateTime;
-
             let completed = true;
 
             Object.entries(data.skills).map(([key, value]) => {
