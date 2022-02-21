@@ -276,6 +276,13 @@ th {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+.grid-5 {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
 .box {
     display: flex;
     flex-direction: row;

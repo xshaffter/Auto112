@@ -56,6 +56,6 @@ namespace AutoHitManager
             GameObject.DestroyImmediate(Game);
         }
 
-        public override string GetVersion() => "90.111.116.101";
+        public override string GetVersion() => "1.2.0";
     }
 }

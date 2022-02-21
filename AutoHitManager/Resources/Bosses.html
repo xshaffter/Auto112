@@ -16,7 +16,7 @@
             <span id="boss-count">15</span> / <span id="boss-total">40</span>
         </span>
     </div>
-    <div class="grid-2-6">
+    <div class="grid-5">
         <div class="box"><img id="img-1" /></div>
         <div class="box"><img id="img-2" /></div>
         <div class="box"><img id="img-3" /></div>
@@ -38,22 +38,26 @@
 
         function doUpdateData(run_data) {
             let index = 0;
-            Object.entries(run_data.bosses).forEach(([key, value]) => {
-                imgs[index].setAttribute("src", "res/bosses/" + key + ".png");
-                imgs[index].setAttribute("alt", key);
-                if (value.defeated) {
-                    imgs[index].parentElement.classList.add("active");
-                } else {
-                    imgs[index].parentElement.classList.remove("active");
-                }
-                index++;
-            });
-            for (let i = index; index < 6; i++) {
-                imgs[i].setAttribute("src", "");
-                imgs[i].setAttribute("alt", "");
-            }
             boss_count.innerHTML = run_data.boss_count;
             boss_total.innerHTML = run_data.total_bosses;
+            try {
+                Object.entries(run_data.bosses).forEach(([key, value]) => {
+                    imgs[index].setAttribute("src", "res/bosses/" + key + ".png");
+                    imgs[index].setAttribute("alt", key);
+                    if (value.defeated) {
+                        imgs[index].parentElement.classList.add("active");
+                    } else {
+                        imgs[index].parentElement.classList.remove("active");
+                    }
+                    index++;
+                });
+                for (let i = index; index < 6; i++) {
+                    imgs[i].setAttribute("src", "");
+                    imgs[i].setAttribute("alt", "");
+                }
+            } catch (ex) {
+
+            }
         }
     </script>
     <script src="javascript.js"></script>

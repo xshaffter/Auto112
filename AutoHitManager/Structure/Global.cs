@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using Newtonsoft.Json;
 
 using KeyValuePair = System.Collections.Generic.Dictionary<string, int>;
 using AutoHitManager.Managers;
@@ -96,7 +95,6 @@ namespace AutoHitManager.Cat
             Directory.CreateDirectory(folder);
             if (alwaysCopy || !File.Exists(path_result))
             {
-                Log($"AutoHitManager.Resources.{origFolder}{origFile}");
                 using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"AutoHitManager.Resources.{origFolder}{origFile}");
                 var file = File.Create(path_result);
                 stream.CopyTo(file);

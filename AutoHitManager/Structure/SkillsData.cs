@@ -82,7 +82,6 @@ namespace AutoHitManager.Structure
         {
             string fileName = "data.html";
             string fullPath = Path.Combine(Constants.DirFolder, fileName);
-            string timeString = DateTime.Now.ToString("hh:mm:ss");
 
             try
             {
@@ -97,22 +96,22 @@ namespace AutoHitManager.Structure
                 {
                     string html = $"<html><body><script>" +
                                   $"const data = {{" +
-                                  $"skills: {{" +
-                                      $"acidArmour: {_hasAcidArmour.ToString().ToLower()}," +
-                                      $"cyclone: {_hasCyclone.ToString().ToLower()}," +
-                                      $"dashLevel: {_dashLevel}," +
-                                      $"dreamNailLevel: {_dreamNailLevel}," +
-                                      $"dashSlash: {_hasDashSlash.ToString().ToLower()}," +
-                                      $"doubleJump: {_hasDoubleJump.ToString().ToLower()}," +
-                                      $"fireballLevel: {_fireballLevel.ToString().ToLower()}," +
-                                      $"focus: true," +
-                                      $"greatSlash: {_hasUpwardSlash.ToString().ToLower()}," +
-                                      $"quakeLevel: {_quakeLevel.ToString().ToLower()}," +
-                                      $"screamLevel: {_screamLevel.ToString().ToLower()}," +
-                                      $"superDash: {_hasSuperDash.ToString().ToLower()}," +
-                                      $"wallJump: {_hasWalljump.ToString().ToLower()}," +
-                                  $"}}," +
-                                  $"lastUpdateTime: '{timeString}'" +
+                                      $"skills: {{" +
+                                          $"acidArmour: {_hasAcidArmour.ToString().ToLower()}," +
+                                          $"cyclone: {_hasCyclone.ToString().ToLower()}," +
+                                          $"dashLevel: {_dashLevel}," +
+                                          $"dreamNailLevel: {_dreamNailLevel}," +
+                                          $"dashSlash: {_hasDashSlash.ToString().ToLower()}," +
+                                          $"doubleJump: {_hasDoubleJump.ToString().ToLower()}," +
+                                          $"fireballLevel: {_fireballLevel.ToString().ToLower()}," +
+                                          $"focus: true," +
+                                          $"greatSlash: {_hasUpwardSlash.ToString().ToLower()}," +
+                                          $"quakeLevel: {_quakeLevel.ToString().ToLower()}," +
+                                          $"screamLevel: {_screamLevel.ToString().ToLower()}," +
+                                          $"superDash: {_hasSuperDash.ToString().ToLower()}," +
+                                          $"wallJump: {_hasWalljump.ToString().ToLower()}," +
+                                      $"}}," +
+                                      $"last_update: '{DateTime.Now:hh:mm:ss}'" +
                                   $"}};" +
                                   $"parent.DoUpdate(data);" +
                                   $"</script></body></html>";

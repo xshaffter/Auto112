@@ -2,13 +2,13 @@
 	<PropertyGroup>
 		<TargetFramework>net35</TargetFramework>
 		<AssemblyTitle>AutoHitManager</AssemblyTitle>
-		<AssemblyVersion>90.111.116.101</AssemblyVersion>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<DebugType>portable</DebugType>
 		<Copyright>Copyright © 2021</Copyright>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
 		<LangVersion>latest</LangVersion>
-    <HollowKnightRefs>C:\Users\xshaf\source\repos\Hollow-bases\1.4</HollowKnightRefs>
-    <HollowKnightOutput>D:\SteamLibrary\steamapps\common\Hollow Knight\hollow_knight_Data\Managed</HollowKnightOutput>
+    <HollowKnightRefs>C:\Program Files (x86)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed</HollowKnightRefs>
+    <HollowKnightOutput>C:\Program Files (x86)\Steam\steamapps\common\Hollow Knight\hollow_knight_Data\Managed</HollowKnightOutput>
 	</PropertyGroup>
 	<Target Name="CopyMod" AfterTargets="PostBuildEvent">
 		<RemoveDir Directories="$(ExportDir)/$(TargetName)/" />
@@ -43,6 +43,7 @@
 	  <None Remove="Resources\res\bosses\grimm.png" />
 	  <None Remove="Resources\res\bosses\gruz mother.png" />
 	  <None Remove="Resources\res\bosses\hive knight.png" />
+	  <None Remove="Resources\res\bosses\hollow knight.png" />
 	  <None Remove="Resources\res\bosses\hornet sentinel.png" />
 	  <None Remove="Resources\res\bosses\hornet.png" />
 	  <None Remove="Resources\res\bosses\lost kin.png" />
@@ -108,6 +109,7 @@
     <EmbeddedResource Include="Resources\res\bosses\grimm.png" />
     <EmbeddedResource Include="Resources\res\bosses\gruz mother.png" />
     <EmbeddedResource Include="Resources\res\bosses\hive knight.png" />
+    <EmbeddedResource Include="Resources\res\bosses\hollow knight.png" />
     <EmbeddedResource Include="Resources\res\bosses\hornet sentinel.png" />
     <EmbeddedResource Include="Resources\res\bosses\hornet.png" />
     <EmbeddedResource Include="Resources\res\bosses\lost kin.png" />

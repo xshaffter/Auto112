@@ -7,18 +7,10 @@
 <body>
 
     <div class="skills">
-        <div id="acidArmour" class="skill"></div>
-        <div id="completed"></div>
-        <div id="cyclone" class="skill"></div>
         <div id="dash" class="skill"></div>
-        <div id="dashSlash" class="skill"></div>
-        <div id="doubleJump" class="skill"></div>
         <div id="dreamNail" class="skill"></div>
         <div id="fireball" class="skill"></div>
-        <div id="focus" class="skill"></div>
-        <div id="greatSlash" class="skill"></div>
         <div id="quake" class="skill"></div>
-        <div id="scream" class="skill"></div>
         <div id="superDash" class="skill"></div>
         <div id="wallJump" class="skill"></div>
     </div>
@@ -88,61 +80,56 @@
     </script>
     <script>
         const elements = {
-            acidArmour: document.querySelector('#acidArmour'),
-            cyclone: document.querySelector('#cyclone'),
             dashLevel: document.querySelector('#dash'),
-            dashSlash: document.querySelector('#dashSlash'),
-            doubleJump: document.querySelector('#doubleJump'),
             dreamNailLevel: document.querySelector('#dreamNail'),
             fireballLevel: document.querySelector('#fireball'),
-            greatSlash: document.querySelector('#greatSlash'),
             quakeLevel: document.querySelector('#quake'),
-            screamLevel: document.querySelector('#scream'),
             superDash: document.querySelector('#superDash'),
             wallJump: document.querySelector('#wallJump'),
         };
 
-        let lastUpdateTime;
-
         function doUpdateData(data) {
             let completed = true;
 
-            Object.entries(data.skills).map(([key, value]) => {
-                const skillElement = elements[key];
+            try {
+                Object.entries(data.skills).map(([key, value]) => {
+                    const skillElement = elements[key];
 
-                if (skillElement && skillElement.dataset.value !== value.toString()) {
-                    skillElement.dataset.value = value;
+                    if (skillElement && skillElement.dataset.value !== value.toString()) {
+                        skillElement.dataset.value = value;
 
-                    if (value) {
-                        skillElement.classList.add('active');
-                    }
-                    else {
-                        skillElement.classList.remove('active');
+                        if (value) {
+                            skillElement.classList.add('active');
+                        }
+                        else {
+                            skillElement.classList.remove('active');
+                        }
+
+                        if (config.skills[key].show) {
+                            skillElement.classList.remove('hide');
+                        }
+                        else {
+                            skillElement.classList.add('hide');
+                        }
                     }
 
-                    if (config.skills[key].show) {
-                        skillElement.classList.remove('hide');
+                    if (completed) {
+                        if (typeof value === 'number') {
+                            completed = completed && value >= config.skills[key].requiredLevel;
+                        } else {
+                            completed = completed && value === config.skills[key].required;
+                        }
                     }
-                    else {
-                        skillElement.classList.add('hide');
-                    }
+                });
+
+                if (config.showCompleted && completed) {
+                    document.querySelector('#completed').classList.add('show');
+                } else {
+                    document.querySelector('#completed').classList.remove('show');
                 }
-
-                if (completed) {
-                    if (typeof value === 'number') {
-                        completed = completed && value >= config.skills[key].requiredLevel;
-                    } else {
-                        completed = completed && value === config.skills[key].required;
-                    }
-                }
-            });
-
-            if (config.showCompleted && completed) {
-                document.querySelector('#completed').classList.add('show');
-            } else {
-                document.querySelector('#completed').classList.remove('show');
+            } catch (ex) {
             }
-        };
+        }
 
     </script>
     <script src="javascript.js"></script>
