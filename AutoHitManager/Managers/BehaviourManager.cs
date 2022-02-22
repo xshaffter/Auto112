@@ -17,11 +17,6 @@ namespace AutoHitManager.Managers
                     HeroController.instance.gameObject.AddComponent<CollisionManager>();
                 }
             }
-            
-            if (Input.GetKeyDown(KeyCode.F7))
-            {
-                Global.LocalSaveData.Hits = 0;
-            }
 
             if (HeroController.instance.cState.lookingUp)
             {

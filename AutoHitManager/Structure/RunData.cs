@@ -72,17 +72,13 @@ namespace AutoHitManager.Structure
         private List<Boss> BossList = new()
         {
             BossCat.FalseKnight,
-            BossCat.Vengefly,
             BossCat.Hornet,
+            BossCat.Gruz,
             BossCat.Mantis,
-            BossCat.SoulWarrior1st,
             BossCat.SoulMaster,
-            BossCat.SoulWarrior2nd,
-            BossCat.DungDefender,
-            BossCat.BrokenVessel,
-            BossCat.WatcherKnights,
+            BossCat.SoulWarrior1st,
             BossCat.Uumuu,
-            BossCat.Collector,
+            BossCat.WatcherKnights,
             BossCat.HollowKnight
         };
         private int TotalBossCount => BossList.Count;
@@ -92,7 +88,7 @@ namespace AutoHitManager.Structure
             get
             {
                 int pageSize = 5;
-                int indexFalse;
+                int indexFalse; 
                 var firstFalse = BossList.Where(boss => !boss.Defeated).FirstOrDefault();
                 if (firstFalse != null)
                 {
@@ -100,9 +96,9 @@ namespace AutoHitManager.Structure
                 }
                 else
                 {
-                    indexFalse = ((int)Math.Floor(BossList.Count / 6.0)) * 6;
+                    indexFalse = ((int)Math.Floor(BossList.Count / ((float)pageSize))) * pageSize;
                 }
-                int page = (int)Math.Floor(indexFalse / 6.0);
+                int page = (int)Math.Floor(indexFalse / ((float)pageSize));
                 int start = page * pageSize;
                 int end = start + pageSize - 1;
                 if (end > BossList.Count)
