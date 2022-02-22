@@ -56,6 +56,6 @@ namespace AutoHitManager
             GameObject.DestroyImmediate(Game);
         }
 
-        public override string GetVersion() => "1.2.0";
+        public override string GetVersion() => "1.2.0ess-superman";
     }
 }

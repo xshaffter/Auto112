@@ -152,7 +152,7 @@ namespace AutoHitManager
                 if (folder == "")
                 {
                     var dir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                    var final_dir = Path.Combine(dir, "Auto112/");
+                    var final_dir = Path.Combine(dir, "AutoEssSuperman/");
                     if (!Directory.Exists(final_dir))
                     {
                         Directory.CreateDirectory(final_dir);
