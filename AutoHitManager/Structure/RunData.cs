@@ -100,9 +100,9 @@ namespace AutoHitManager.Structure
                 }
                 else
                 {
-                    indexFalse = ((int)Math.Floor(BossList.Count / 6.0)) * 6;
+                    indexFalse = ((int)Math.Floor(BossList.Count / ((float)pageSize))) * pageSize;
                 }
-                int page = (int)Math.Floor(indexFalse / 6.0);
+                int page = (int)Math.Floor(indexFalse / ((float)pageSize));
                 int start = page * pageSize;
                 int end = start + pageSize - 1;
                 if (end > BossList.Count)
