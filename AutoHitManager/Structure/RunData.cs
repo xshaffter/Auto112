@@ -71,212 +71,52 @@ namespace AutoHitManager.Structure
         private const int TotalCharms = 40;
         private List<Boss> BossList = new()
         {
-            new()
-            {
-                Name = "False Knight",
-                Defeated = PlayerData.instance.falseKnightDefeated,
-            },
-            new()
-            {
-                Name = "Vengefly King",
-                Defeated = PlayerData.instance.killsBigBuzzer <= 1,
-            },
-            new()
-            {
-                Name = "Hornet",
-                Defeated = PlayerData.instance.hornet1Defeated,
-            },
-            new()
-            {
-                Name = "Mantis Lords",
-                Defeated = PlayerData.instance.defeatedMantisLords,
-            },
-            new()
-            {
-                Name = "Soul Master",
-                Defeated = PlayerData.instance.mageLordDefeated,
-            },
-            new()
-            {
-                Name = "Gruz Mother",
-                Defeated = PlayerData.instance.killedBigFly,
-            },
+            BossCat.FalseKnight,
+            BossCat.Vengefly,
+            BossCat.Hornet,
+            BossCat.Mantis,
+            BossCat.SoulMaster,
+            BossCat.Gruz,
 
-            new()
-            {
-                Name = "Soul Warrior",
-                Defeated = PlayerData.instance.killedMageKnight,
-            },
-            new()
-            {
-                Name = "Broken Vessel",
-                Defeated = PlayerData.instance.killedInfectedKnight,
-            },
-            new()
-            {
-                Name = "Lost Kin",
-                Defeated = PlayerData.instance.infectedKnightDreamDefeated,
-            },
-            new()
-            {
-                Name = "Dung Defender",
-                Defeated = PlayerData.instance.killedDungDefender,
-            },
-            new()
-            {
-                Name = "Soul Tyrant",
-                Defeated = PlayerData.instance.mageLordDreamDefeated,
-            },
-            new()
-            {
-                Name = "Gorb",
-                Defeated = PlayerData.instance.killedGhostAladar,
-            },
+            BossCat.SoulWarrior,
+            BossCat.Broken Vessel,
+            BossCat.LostKin,
+            BossCat.DungDefender,
+            BossCat.SoulTyrant,
+            BossCat.Gorb,
 
-            new()
-            {
-                Name = "Xero",
-                Defeated = PlayerData.instance.killedGhostXero,
-            },
-            new()
-            {
-                Name = "Crystal Guardian",
-                Defeated = PlayerData.instance.killedMegaBeamMiner
-            },
-            new()
-            {
-                Name = "Enraged Guardian",
-                Defeated = PlayerData.instance.killsMegaBeamMiner <= 0,
-            },
-            new()
-            {
-                Name = "Mega Moss Charger",
-                Defeated = PlayerData.instance.killedMegaMossCharger,
-            },
-            new()
-            {
-                Name = "No Eyes",
-                Defeated = PlayerData.instance.killedGhostNoEyes,
-            },
-            new()
-            {
-                Name = "Hornet Sentinel",
-                Defeated = PlayerData.instance.hornetOutskirtsDefeated,
-            },
+            BossCat.Xero,
+            BossCat.CrystalGuardian,
+            BossCat.EnragedGuardian,
+            BossCat.MegaMossCharge,
+            BossCat.NoEyes,
+            BossCat.HornetSentinel,
 
-            new()
-            {
-                Name = "Failed Champion",
-                Defeated = PlayerData.instance.falseKnightDreamDefeated,
-            },
-            new()
-            {
-                Name = "Grimm",
-                Defeated = PlayerData.instance.killedGrimm,
-            },
-            new()
-            {
-                Name = "Brooding Mawlek",
-                Defeated = PlayerData.instance.killedMawlek,
-            },
-            new()
-            {
-                Name = "Elder Hu",
-                Defeated = PlayerData.instance.killedGhostHu,
-            },
-            new()
-            {
-                Name = "Uumuu",
-                Defeated = PlayerData.instance.monomonDefeated,
-            },
-            new()
-            {
-                Name = "Marmu",
-                Defeated = PlayerData.instance.killedGhostMarmu,
-            },
+            BossCat.FailedChampion,
+            BossCat.Grimm,
+            BossCat.BroodingMawlek,
+            BossCat.ElderHu,
+            BossCat.Uumuu,
+            BossCat.Marmu,
 
-            new()
-            {
-                Name = "Traitor Lord",
-                Defeated = PlayerData.instance.killedTraitorLord,
-            },
-            new()
-            {
-                Name = "Galien",
-                Defeated = PlayerData.instance.killedGhostGalien,
-            },
-            new()
-            {
-                Name = "Nosk",
-                Defeated = PlayerData.instance.killedMimicSpider,
-            },
-            new()
-            {
-                Name = "Markoth",
-                Defeated = PlayerData.instance.killedGhostMarkoth,
-            },
-            new()
-            {
-                Name = "Watcher Knights",
-                Defeated = PlayerData.instance.lurienDefeated,
-            },
-            new()
-            {
-                Name = "White Defender",
-                Defeated = PlayerData.instance.whiteDefenderDefeated,
-            },
+            BossCat.TraitorLord,
+            BossCat.Galien,
+            BossCat.Nosk,
+            BossCat.Markoth,
+            BossCat.WatcherKnights,
+            BossCat.WhiteDefender,
 
-            new()
-            {
-                Name = "Collector",
-                Defeated = PlayerData.instance.collectorDefeated,
-            },
-            new()
-            {
-                Name = "Hive Knight",
-                Defeated = PlayerData.instance.killedHiveKnight,
-            },
-            new()
-            {
-                Name = "NKG",
-                Defeated = PlayerData.instance.killedNightmareGrimm,
-            },
-            new()
-            {
-                Name = "Grey Prince Zote",
-                Defeated = PlayerData.instance.greyPrinceDefeated,
-            },
-            new()
-            {
-                Name = "Fluke Mother",
-                Defeated = PlayerData.instance.flukeMotherDefeated,
-            },
-            new()
-            {
-                Name = "Oro & Mato",
-                Defeated = PlayerData.instance.killedNailBros,
-            },
+            BossCat.Collector,
+            BossCat.HiveKnight,
+            BossCat.NKG,
+            BossCat.GPZote,
+            BossCat.FlukeMother,
+            BossCat.OroNMato,
 
-            new()
-            {
-                Name = "Sheo",
-                Defeated = PlayerData.instance.killedPaintmaster,
-            },
-            new()
-            {
-                Name = "Sly",
-                Defeated = PlayerData.instance.killedNailsage,
-            },
-            new()
-            {
-                Name = "Pure Vessel",
-                Defeated = PlayerData.instance.killedHollowKnightPrime,
-            },
-            new()
-            {
-                Name = "Radiance",
-                Defeated = PlayerData.instance.killsFinalBoss <= 0,
-            },
+            BossCat.Sheo,
+            BossCat.Sly,
+            BossCat.PureVessel,
+            BossCat.Radiance
         };
         private int TotalBossCount => BossList.Count;
         private int BossCount => BossList.Count(boss => boss.Defeated);
@@ -293,9 +133,9 @@ namespace AutoHitManager.Structure
                 }
                 else
                 {
-                    indexFalse = ((int)Math.Floor(BossList.Count / 6.0)) * 6;
+                    indexFalse = ((int)Math.Floor(BossList.Count / (double)pageSize)) * pageSize;
                 }
-                int page = (int)Math.Floor(indexFalse / 6.0);
+                int page = (int)Math.Floor(indexFalse / (double)pageSize);
                 int start = page * pageSize;
                 int end = start + pageSize - 1;
                 if (end > BossList.Count)

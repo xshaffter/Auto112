@@ -27,68 +27,6 @@
 		<WriteLinesToFile File="$(ExportDir)/$(TargetName)/SHA.txt" Lines="@(FilesWithHashes->'%(FileHash)')" Overwrite="true" Encoding="UTF-8" />
 	</Target>
 	<ItemGroup>
-	  <None Remove="Resources\res\bosses\broken vessel.png" />
-	  <None Remove="Resources\res\bosses\brooding mawlek.png" />
-	  <None Remove="Resources\res\bosses\collector.png" />
-	  <None Remove="Resources\res\bosses\crystal guardian.png" />
-	  <None Remove="Resources\res\bosses\dung defender.png" />
-	  <None Remove="Resources\res\bosses\elder hu.png" />
-	  <None Remove="Resources\res\bosses\enraged guardian.png" />
-	  <None Remove="Resources\res\bosses\failed champion.png" />
-	  <None Remove="Resources\res\bosses\false knight.png" />
-	  <None Remove="Resources\res\bosses\fluke mother.png" />
-	  <None Remove="Resources\res\bosses\galien.png" />
-	  <None Remove="Resources\res\bosses\gorb.png" />
-	  <None Remove="Resources\res\bosses\grey prince zote.png" />
-	  <None Remove="Resources\res\bosses\grimm.png" />
-	  <None Remove="Resources\res\bosses\gruz mother.png" />
-	  <None Remove="Resources\res\bosses\hive knight.png" />
-	  <None Remove="Resources\res\bosses\hollow knight.png" />
-	  <None Remove="Resources\res\bosses\hornet sentinel.png" />
-	  <None Remove="Resources\res\bosses\hornet.png" />
-	  <None Remove="Resources\res\bosses\lost kin.png" />
-	  <None Remove="Resources\res\bosses\mantis lords.png" />
-	  <None Remove="Resources\res\bosses\markoth.png" />
-	  <None Remove="Resources\res\bosses\marmu.png" />
-	  <None Remove="Resources\res\bosses\mega moss charger.png" />
-	  <None Remove="Resources\res\bosses\nkg.png" />
-	  <None Remove="Resources\res\bosses\no eyes.png" />
-	  <None Remove="Resources\res\bosses\nosk.png" />
-	  <None Remove="Resources\res\bosses\oro &amp; mato.png" />
-	  <None Remove="Resources\res\bosses\pure vessel.png" />
-	  <None Remove="Resources\res\bosses\radiance.png" />
-	  <None Remove="Resources\res\bosses\sheo.png" />
-	  <None Remove="Resources\res\bosses\sly.png" />
-	  <None Remove="Resources\res\bosses\soul master.png" />
-	  <None Remove="Resources\res\bosses\soul tyrant.png" />
-	  <None Remove="Resources\res\bosses\soul warrior.png" />
-	  <None Remove="Resources\res\bosses\traitor lord.png" />
-	  <None Remove="Resources\res\bosses\uumuu.png" />
-	  <None Remove="Resources\res\bosses\vengefly king.png" />
-	  <None Remove="Resources\res\bosses\watcher knights.png" />
-	  <None Remove="Resources\res\bosses\white defender.png" />
-	  <None Remove="Resources\res\bosses\xero.png" />
-	</ItemGroup>
-	<ItemGroup>
-    <EmbeddedResource Include="Resources\images\Abyss_Shriek_Icon.png" />
-    <EmbeddedResource Include="Resources\images\AllSkills.png" />
-    <EmbeddedResource Include="Resources\images\Awoken_Dream_Nail_Icon.png" />
-    <EmbeddedResource Include="Resources\images\Crystal_Heart_Icon.png" />
-    <EmbeddedResource Include="Resources\images\Cyclone_Slash.png" />
-    <EmbeddedResource Include="Resources\images\Dash_Slash.png" />
-    <EmbeddedResource Include="Resources\images\Descending_Dark_Icon.png" />
-    <EmbeddedResource Include="Resources\images\Desolate_Dive_Icon.png" />
-    <EmbeddedResource Include="Resources\images\Dream_Nail.png" />
-    <EmbeddedResource Include="Resources\images\Focus_inventory.png" />
-    <EmbeddedResource Include="Resources\images\Great_Slash.png" />
-    <EmbeddedResource Include="Resources\images\Howling_Wraiths_Icon.png" />
-    <EmbeddedResource Include="Resources\images\Ismas_Tear.png" />
-    <EmbeddedResource Include="Resources\images\Mantis_Claw.png" />
-    <EmbeddedResource Include="Resources\images\Monarch_Wings_Icon.png" />
-    <EmbeddedResource Include="Resources\images\Mothwing_Cloak_Icon.png" />
-    <EmbeddedResource Include="Resources\images\Shade_Cloak_Icon.png" />
-    <EmbeddedResource Include="Resources\images\Shade_Soul_Icon.png" />
-    <EmbeddedResource Include="Resources\images\Vengeful_Spirit_Icon.png" />
     <EmbeddedResource Include="Resources\Notches.html" />
     <EmbeddedResource Include="Resources\Mask.html" />
     <EmbeddedResource Include="Resources\Grubs.html" />
@@ -144,7 +82,6 @@
     <EmbeddedResource Include="Resources\res\grub.png" />
     <EmbeddedResource Include="Resources\res\mask.png" />
     <EmbeddedResource Include="Resources\res\notches.png" />
-    <EmbeddedResource Include="Resources\Skills.html" />
     <EmbeddedResource Include="Resources\Bosses.html" />
     <EmbeddedResource Include="Resources\Dreamers.html" />
     <EmbeddedResource Include="Resources\Charms.html" />

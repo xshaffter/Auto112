@@ -34,31 +34,31 @@ This mods allows you to see your run info in a html overlay with streaming purpo
 1. run_data.html
 
 ### Bosses
-- This file displays boss list as defined in style.css with the info provided by [Bosses] Property in RunData.cs (recomended dims: 500x600)
+- This file displays boss list as defined in style.css with the info provided by [Bosses] Property in [RunData](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Structure/RunData.cs) (recomended dims: 500x600)
 
 ### Charms
-- This file displays obtained charms/max charms with the info provided by [Charms] Property in RunData.cs (recomended dims: 300x200)
+- This file displays obtained charms/max charms with the info provided by [Charms] Property in [RunData](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Structure/RunData.cs) (recomended dims: 300x200)
 
 ### Colosseums
-- This file displays colosseums status as defined in style.css with the info provided by Colosseum[1-3] Properties in RunData.cs (recomended dims: 1200x600 (rescale after definition))
+- This file displays colosseums status as defined in style.css with the info provided by Colosseum[1-3] Properties in [RunData](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Structure/RunData.cs) (recomended dims: 1200x600 (rescale after definition))
 
 ### Dreamers
-- This file displays dreamers as defined in style.css with the info provided by [Dreamers] Property in RunData.cs (recomended dims: 250x300)
+- This file displays dreamers as defined in style.css with the info provided by [Dreamers] Property in [RunData](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Structure/RunData.cs) (recomended dims: 250x300)
 
 ### Grubs
-- This file displays [grubs]/[total grubs] as defined in style.css with the info provided by [Grubs, TotalGrubs] Property in RunData.cs (recomended dims: 800x600)
+- This file displays [grubs]/[total grubs] as defined in style.css with the info provided by [Grubs, TotalGrubs] Property in [RunData](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Structure/RunData.cs) (recomended dims: 800x600)
 
 ### HitCounter
-- This file displays a hit counter manager as defined in style.css with the info provided by [Hits, Fury] Properties in RunData.cs (recomended dims: 320x150)
+- This file displays a hit counter manager as defined in style.css with the info provided by [Hits, Fury] Properties in [RunData](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Structure/RunData.cs) (recomended dims: 320x150)
 
 ### Mask
-- This file displays mask status as defined in style.css with the info provided by [fullMasks] Property in RunData.cs (recomended dims: 225x329)
+- This file displays mask status as defined in style.css with the info provided by [fullMasks] Property in [RunData](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Structure/RunData.cs) (recomended dims: 225x329)
 
 ### Nail
-- This file displays nail status as defined in style.css with the info provided by [NailStatus] Property in RunData.cs (recomended dims: 36x162)
+- This file displays nail status as defined in style.css with the info provided by [NailStatus] Property in [RunData](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Structure/RunData.cs) (recomended dims: 36x162)
 
 ### Notches
-- This file displays [curren notches]/[max notches] as defined in style.css with the info provided by [CharmSlots, TotalCharmSlots] Properties in RunData.cs (recomended dims: 150x100)
+- This file displays [curren notches]/[max notches] as defined in style.css with the info provided by [CharmSlots, TotalCharmSlots] Properties in [RunData](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Structure/RunData.cs) (recomended dims: 150x100)
 
 ### styles
 - this is the styles file for your designs, feel free to change this to make your design better

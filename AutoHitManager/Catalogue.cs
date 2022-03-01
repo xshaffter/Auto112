@@ -59,7 +59,7 @@ namespace AutoHitManager
             Name = "Dung Defender",
             Defeated = PlayerData.instance.killedDungDefender,
         };
-        internal Boss SoulTurant => new Boss()
+        internal Boss SoulTyrant => new Boss()
         {
             Name = "Soul Tyrant",
             Defeated = PlayerData.instance.mageLordDreamDefeated,
@@ -132,7 +132,7 @@ namespace AutoHitManager
             Defeated = PlayerData.instance.killedGhostMarmu,
         };
 
-        internal Boss TraitorsLord => new Boss()
+        internal Boss TraitorLord => new Boss()
         {
             Name = "Traitor Lord",
             Defeated = PlayerData.instance.killedTraitorLord,
