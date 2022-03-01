@@ -1,56 +1,67 @@
 # AutoHit Manager
-Hollow Knight AutoHitter Count manager mod
+This mods allows you to see your run info in a html overlay with streaming purpose.
 
-### Starting
-- This mod has to be ran before being correctly used, will generate a folder in [My Documents] named "AutoHit", where it will put every needed file to be used.
+## Requirements
+- Hollow knight 1.4.3.2
+- [Modding API 1.4.3.2-60](https://github.com/hk-modding/api/releases)
+
+
+### How to use
+- This mod has to be ran before being correctly used, will generate a folder in [My Documents] named "Auto112", where it will put every needed file to be used.
+- once created, you may open OBS (studio/streamlabs)
+- select "add source"
+- select "add navigator source"
+- once in the popup select "local file" and go to the previously indicated folder and you may select any layout you want
+
 ### Recomendations
-- use https://github.com/carloslancha/allskills-mod mod with this to be able to see the skills too, this way you may see everything in your run.
+- use Empaventura's [all-skills mod](https://github.com/carloslancha/allskills-mod) with this to be able to see the skills too, this way you may see everything in your run.
 
-#### Built-in Files
-- Bosses.html
-- Charms.html
-- Colosseums.html
-- Dreamers.html
-- Grubs.html
-- HitCounter.html
-- Mask.html
-- Charms.html
-- Charms.html
-- run_data.html
-- javascript.js
-- styles.css
+#### Built-in 
+
+- [Bosses.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/Bosses.html)
+- [Charms.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/Charms.html)
+- [Colosseums.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/Colosseums.html)
+- [Dreamers.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/Dreamers.html)
+- [Grubs.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/Grubs.html)
+- [HitCounter.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/HitCounter.html)
+- [Mask.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/Mask.html)
+- [Charms.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/Charms.html)
+- [Charms.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/Charms.html)
+- [run_data.html](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/run_data.html)
+- [javascript.js](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/javascript.js)
+- [styles.css](https://github.com/xshaffter/Auto112/blob/master/AutoHitManager/Resources/styles.css)
 ##### Generated files
 1. run_data.html
 
 ### Bosses
-- This file displays boss list as defined in style.css with the info provided by [Bosses] Property in RunData.cs 
+- This file displays boss list as defined in style.css with the info provided by [Bosses] Property in RunData.cs (recomended dims: 500x600)
 
 ### Charms
-- This file displays obtained charms/max charms with the info provided by [Charms] Property in RunData.cs 
+- This file displays obtained charms/max charms with the info provided by [Charms] Property in RunData.cs (recomended dims: 300x200)
 
 ### Colosseums
-- This file displays colosseums status as defined in style.css with the info provided by Colosseum[1-3] Properties in RunData.cs 
+- This file displays colosseums status as defined in style.css with the info provided by Colosseum[1-3] Properties in RunData.cs (recomended dims: 1200x600 (rescale after definition))
 
 ### Dreamers
-- This file displays dreamers as defined in style.css with the info provided by [Dreamers] Property in RunData.cs 
+- This file displays dreamers as defined in style.css with the info provided by [Dreamers] Property in RunData.cs (recomended dims: 250x300)
 
 ### Grubs
-- This file displays [grubs]/[total grubs] as defined in style.css with the info provided by [Grubs, TotalGrubs] Property in RunData.cs 
+- This file displays [grubs]/[total grubs] as defined in style.css with the info provided by [Grubs, TotalGrubs] Property in RunData.cs (recomended dims: 800x600)
 
 ### HitCounter
-- This file displays a hit counter manager as defined in style.css with the info provided by [Hits, Fury] Properties in RunData.cs 
+- This file displays a hit counter manager as defined in style.css with the info provided by [Hits, Fury] Properties in RunData.cs (recomended dims: 320x150)
 
 ### Mask
-- This file displays mask status as defined in style.css with the info provided by [fullMasks] Property in RunData.cs 
+- This file displays mask status as defined in style.css with the info provided by [fullMasks] Property in RunData.cs (recomended dims: 225x329)
 
 ### Nail
-- This file displays nail status as defined in style.css with the info provided by [NailStatus] Property in RunData.cs 
+- This file displays nail status as defined in style.css with the info provided by [NailStatus] Property in RunData.cs (recomended dims: 36x162)
 
 ### Notches
-- This file displays [curren notches]/[max notches] as defined in style.css with the info provided by [CharmSlots, TotalCharmSlots] Properties in RunData.cs 
+- This file displays [curren notches]/[max notches] as defined in style.css with the info provided by [CharmSlots, TotalCharmSlots] Properties in RunData.cs (recomended dims: 150x100)
 
 ### styles
 - this is the styles file for your designs, feel free to change this to make your design better
 
 ### run_data
-- this file is totally generated by the mod, don't update nor modify this file.
+- this file is totally generated by the mod, don't update nor modify this file. This file contains the actual run info to load in your html layouts
