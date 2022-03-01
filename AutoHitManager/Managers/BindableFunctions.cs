@@ -152,7 +152,6 @@ namespace AutoHitManager.Managers
             {
                 Global.UpdateRunDataFile();
             }
-            Global.skillsData.UpdateSkillValues();
             PlayerData.instance.SetBoolInternal(name, orig);
         }
 

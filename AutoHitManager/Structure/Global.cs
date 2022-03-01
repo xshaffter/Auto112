@@ -22,7 +22,6 @@ namespace AutoHitManager.Cat
         internal static Timer FuryTimer;
         internal static Timer FuryGestureTimer;
         internal static bool IsProhibitedZone = false;
-        internal static SkillsData skillsData = new SkillsData();
 
         public static bool IntentionalHit
         {
